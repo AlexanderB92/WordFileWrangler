@@ -4,14 +4,20 @@ An assignment to create a CLI with some file reading, word counting features
 
 # Setup and Prerequisites
 
-** Maven 3.8.1
-** Java 8+
+* Maven 3.8.1
+* Java 8+
 
-# To build and run tests:
-mvn clean install
+1. Build and run tests:
+    ```console
+    mvn clean install
+   ```
 
-# To compile standalone JAR:
-mvn clean compile assembly:single
+2. Compile standalone JAR with dependencies:
+    ```console
+    mvn clean compile assembly:single
+   ```
+   
+# Usage of the CLI
 
 1. Generate More Lorem Ipsum:
     ```console
