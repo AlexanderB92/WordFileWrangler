@@ -70,3 +70,4 @@ An assignment to create a CLI with some file reading, word counting features
 # Known Bugs
 * Ordered approach loses last element
 * Tested on Windows and Linux (Fedora)
+* Typos in "occurrences"
