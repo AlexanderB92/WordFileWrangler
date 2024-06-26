@@ -1,6 +1,5 @@
 .idea
-testdata/
-generated_data/
-result_data/
-result_data_from_ordered/
+testdata/result_data
+testdata/generated_data
+testdata/result_data_from_ordered
 target/
