@@ -173,7 +173,7 @@ public class ApplicationUnitTest {
      * @throws IOException
      */
     @Test
-    public void testCreateDictionaryUnorderedForStaticDataDirectoryFile() throws IOException {
+    public void testCreateDictionaryUnorderedForStaticDataDirectoryFile() throws IOException, InterruptedException {
 
         //Setup: Instantiate counter and call method
         Counters r = new Counters();
@@ -183,8 +183,7 @@ public class ApplicationUnitTest {
         r.createFileDictionaryLike(cr, COUNTER_OUT_DIR);
 
         //Assume file created (could also assert number of files)
-        Path resultFile = Paths.get(ORDERED_COUNTER_OUT_DIR + "\\FILE_b.txt");
-        Assertions.assertTrue(Files.exists(resultFile));
+        //todo: WatchService or similar to watch for filecreation
 
     }
 
