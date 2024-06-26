@@ -8,6 +8,7 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
+import java.io.File;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -21,11 +22,11 @@ import java.util.Map;
  */
 public class ApplicationUnitTest {
 
-    private final String GENERATED_DATA_DIR = Paths.get("").toAbsolutePath() + "\\generated_data";
-    private final String STATIC_DATA_DIR = Paths.get("").toAbsolutePath() + "\\static_data";
-    private final String COUNTER_OUT_DIR = Paths.get("").toAbsolutePath() + "\\result_data";
-    private final String ORDERED_STATIC_DATA_DIR = Paths.get("").toAbsolutePath() + "\\ordered_static_data";
-    private final String ORDERED_COUNTER_OUT_DIR = Paths.get("").toAbsolutePath() + "\\result_data_from_ordered";
+    private final String GENERATED_DATA_DIR = Paths.get("").toAbsolutePath() + File.separator + "testdata" + File.separator + "generated_data";
+    private final String STATIC_DATA_DIR = Paths.get("").toAbsolutePath() + File.separator + "testdata" + File.separator + "static_data";
+    private final String COUNTER_OUT_DIR = Paths.get("").toAbsolutePath() + File.separator + "testdata" + File.separator + "result_data";
+    private final String ORDERED_STATIC_DATA_DIR = Paths.get("").toAbsolutePath() + File.separator + "testdata" + File.separator + "ordered_static_data";
+    private final String ORDERED_COUNTER_OUT_DIR = Paths.get("").toAbsolutePath() + File.separator + "testdata" + File.separator + "result_data_from_ordered";
 
 
     @BeforeAll

@@ -1,4 +1,5 @@
 .idea
+testdata/
 generated_data/
 result_data/
 result_data_from_ordered/

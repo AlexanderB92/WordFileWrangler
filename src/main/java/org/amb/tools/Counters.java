@@ -6,6 +6,7 @@ import org.amb.io.DirectoryReader;
 import org.amb.model.WordCount;
 
 import java.io.BufferedReader;
+import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.*;
@@ -169,7 +170,7 @@ public class Counters {
         OutputWriter outputWriter = new OutputWriter();
         for(Map.Entry<Character, List<WordCount>> orderedEntry : orderedWords.entrySet()) {
             String filename = DICT_FILE_SUFFIX + orderedEntry.getKey() + DICT_FILE_EXTENSION;
-            outputWriter.writeFileFromList(filename, outDir + "\\result_dict\\", (ArrayList<WordCount>) orderedEntry.getValue());
+            outputWriter.writeFileFromList(filename, outDir + File.separator + "result_dict", (ArrayList<WordCount>) orderedEntry.getValue());
             written++;
         }
         return written;

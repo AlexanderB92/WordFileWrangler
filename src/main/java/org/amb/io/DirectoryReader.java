@@ -45,11 +45,11 @@ public class DirectoryReader {
         HashSet<String> exclusions = new HashSet<String>();
 
         //No exclusions
-        if(!Files.exists(Paths.get(path + "\\" + EXCLUDE_FILENAME))) {
+        if(!Files.exists(Paths.get(path + File.separator + EXCLUDE_FILENAME))) {
             return exclusions;
         }
 
-        try(BufferedReader reader = new BufferedReader(new FileReader(path + "\\" + EXCLUDE_FILENAME ))) {
+        try(BufferedReader reader = new BufferedReader(new FileReader(path + File.separator + EXCLUDE_FILENAME ))) {
             String line;
             while ((line = reader.readLine()) != null) {
                 line = line.toLowerCase();

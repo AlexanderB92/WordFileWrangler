@@ -4,6 +4,7 @@ import com.thedeanda.lorem.Lorem;
 import com.thedeanda.lorem.LoremIpsum;
 
 import java.io.BufferedWriter;
+import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.nio.file.Files;
@@ -16,7 +17,7 @@ public class LoremFileGenerator {
     private int NUMBER_OF_FILES = 1;
     private int NUMBER_OF_WORDS = 200;
     private String FILENAME_PREFIX = "default_filename";
-    private final String PATH_TO_OUT_DIR = Paths.get("").toAbsolutePath() + "\\generated_data";
+    private final String PATH_TO_OUT_DIR = Paths.get("").toAbsolutePath() + File.separator + "testdata" + File.separator + "generated_data";
 
 
     public LoremFileGenerator(int numberOfFiles, int numberOfWords, String filenamePrefix) {
@@ -32,7 +33,7 @@ public class LoremFileGenerator {
         Lorem lorem = LoremIpsum.getInstance();
 
         for(int i = 0; i < NUMBER_OF_FILES; i++) {
-            try(BufferedWriter writer = new BufferedWriter(new FileWriter(PATH_TO_OUT_DIR + '/' + FILENAME_PREFIX + fileCount + ".txt"))) {
+            try(BufferedWriter writer = new BufferedWriter(new FileWriter(PATH_TO_OUT_DIR + File.separator + FILENAME_PREFIX + fileCount + ".txt"))) {
                 for(int j = 0; j < NUMBER_OF_WORDS / 10; j++) {
                     String words = lorem.getWords(10,10);
                     writer.write(words);
