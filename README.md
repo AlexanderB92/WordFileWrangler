@@ -1,6 +1,11 @@
-#Prerequisites
-Maven 3.8.1
-Java 8+
+# Word Counter
+
+An assignment to create a CLI with some file reading, word counting features
+
+# Setup and Prerequisites
+
+** Maven 3.8.1
+** Java 8+
 
 # To build and run tests:
 mvn clean install
@@ -9,22 +14,22 @@ mvn clean install
 mvn clean compile assembly:single
 
 
-#To Generate More Lorem Ipsum
+* To Generate More Lorem Ipsum
 java -jar .\WordFileWrangler-1.0-SNAPSHOT-jar-with-dependencies.jar -generate <filecount> <wordcount> <filename>
 
-#To count and print occurrences (with exclusions)
+* To count and print occurrences (with exclusions)
 java -jar .\WordFileWrangler-1.0-SNAPSHOT-jar-with-dependencies.jar -countoccurences <absolute path to dir>
 
-#To print and save exclusions
+* To print and save exclusions
 java -jar .\WordFileWrangler-1.0-SNAPSHOT-jar-with-dependencies.jar -countexcluded <absolute path to dir>
 
-#To create dictionary
+* To create dictionary
 java -jar .\WordFileWrangler-1.0-SNAPSHOT-jar-with-dependencies.jar -createdict <absolute path to dir>
 
-#Example of dir path
+* Example of dir path
 "C:\Users\Alex\Desktop\WordFileWrangler\static_data\"
 
-#Notes:
+# Notes:
 Uses hashmaps for counting structure for constant time for updates. Uses hashset for string collections with (1) constant time (for example in exclusions)
 Performance is determined mainly by use of the way of reading the file (bufferedreader) and the parsing to get words from lines (long or short)
 Spent som time thinking about the file to read. Whether it had linebreaks or not - affects buffersize
@@ -47,6 +52,6 @@ Errorhandling with empty files and in general
 Create a time field in Counter Result, and always pass back performance to the user (time spent)
 Tests overwrite results, but should have a cleanup
 
-#Known Bugs
-Ordered approach loses last element
-Only tested on Windows
+# Known Bugs
+* Ordered approach loses last element
+* Only tested on Windows
