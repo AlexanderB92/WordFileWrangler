@@ -24,10 +24,10 @@ public class Commands {
         }
     }
 
-    public void countOccurences(String dir) {
+    public void countOccurrences(String dir) {
         Counters r = new Counters();
         CounterResult cr = r.countOccurrencesInDirectory(dir);
-        printOccurences(cr.getOccurences());
+        printOccurrences(cr.getOccurences());
     }
 
     public void countExcluded(String dir) throws IOException {
@@ -76,8 +76,8 @@ public class Commands {
                 .build();
 
         //count occurences
-        Option countOccurences = Option.builder("countoccurences")
-                .longOpt("countoccurences")
+        Option countOccurrences = Option.builder("countoccurrences")
+                .longOpt("countoccurrences")
                 .argName("path")
                 .hasArg()
                 .desc("Counter the number of occurences for each word from all files")
@@ -100,7 +100,7 @@ public class Commands {
                 .build();
 
         options.addOption(generateFiles);
-        options.addOption(countOccurences);
+        options.addOption(countOccurrences);
         options.addOption(countExcludedWords);
         options.addOption(createDictionaryFiles);
 
@@ -127,10 +127,10 @@ public class Commands {
             generateFiles(filecount, wordcount, values[2]);
         }
 
-        if(cmd.hasOption("countoccurences")) {
-            String[] values = cmd.getOptionValues("countoccurences");
+        if(cmd.hasOption("countoccurrences")) {
+            String[] values = cmd.getOptionValues("countoccurrences");
             String path = values[0];
-            countOccurences(path);
+            countOccurrences(path);
         }
 
         if(cmd.hasOption("countexcluded")) {
@@ -145,7 +145,7 @@ public class Commands {
         }
     }
 
-    private void printOccurences(HashMap<String, Integer> occurences) {
+    private void printOccurrences(HashMap<String, Integer> occurences) {
         for(Map.Entry<String, Integer> e : occurences.entrySet()) {
             System.out.println("Word: " + e.getKey() + ", count: " + e.getValue());
         }

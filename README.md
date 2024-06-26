@@ -26,7 +26,7 @@ An assignment to create a CLI with some file reading, word counting features
 
 2. Count and print occurrences (with exclusions)
     ```console
-    java -jar .\WordFileWrangler-1.0-SNAPSHOT-jar-with-dependencies.jar -countoccurences <absolute path to dir>
+    java -jar .\WordFileWrangler-1.0-SNAPSHOT-jar-with-dependencies.jar -countoccurrences <absolute path to dir>
    ```
     
 3. Print and save exclusions
