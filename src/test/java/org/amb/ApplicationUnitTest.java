@@ -63,7 +63,7 @@ public class ApplicationUnitTest {
 
         //Setup: Instantiate reader and call method
         Counters r = new Counters();
-        CounterResult cr = r.countOccurrencesInFile(STATIC_DATA_DIR + "\\randomwords_1.txt");
+        CounterResult cr = r.countOccurrencesInFile(STATIC_DATA_DIR + File.separator + "randomwords_1.txt");
 
         //Assume: ie. egestas matches dataset (2)
         Assertions.assertEquals(2, cr.getOccurences().get("egestas"));
@@ -203,7 +203,7 @@ public class ApplicationUnitTest {
         r.createFileDictionaryLikeFromOrderedList(cr, ORDERED_COUNTER_OUT_DIR);
 
         //Assume file created (could also assert number of files)
-        Path resultFile = Paths.get(ORDERED_COUNTER_OUT_DIR + "\\FILE_a.txt");
+        Path resultFile = Paths.get(ORDERED_COUNTER_OUT_DIR + File.separator + "FILE_a.txt");
         Assertions.assertTrue(Files.exists(resultFile));
     }
 
