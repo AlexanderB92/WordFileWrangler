@@ -21,11 +21,11 @@ import java.util.Map;
  */
 public class ApplicationUnitTest {
 
-    private final String GENERATED_DATA_DIR = Paths.get("").toAbsolutePath() + "/generated_data";
-    private final String STATIC_DATA_DIR = Paths.get("").toAbsolutePath() + "/static_data";
-    private final String COUNTER_OUT_DIR = Paths.get("").toAbsolutePath() + "/result_data";
-    private final String ORDERED_STATIC_DATA_DIR = Paths.get("").toAbsolutePath() + "/ordered_static_data";
-    private final String ORDERED_COUNTER_OUT_DIR = Paths.get("").toAbsolutePath() + "/result_data_from_ordered";
+    private final String GENERATED_DATA_DIR = Paths.get("").toAbsolutePath() + "\\generated_data";
+    private final String STATIC_DATA_DIR = Paths.get("").toAbsolutePath() + "\\static_data";
+    private final String COUNTER_OUT_DIR = Paths.get("").toAbsolutePath() + "\\result_data";
+    private final String ORDERED_STATIC_DATA_DIR = Paths.get("").toAbsolutePath() + "\\ordered_static_data";
+    private final String ORDERED_COUNTER_OUT_DIR = Paths.get("").toAbsolutePath() + "\\result_data_from_ordered";
 
 
     @BeforeAll
@@ -62,7 +62,7 @@ public class ApplicationUnitTest {
 
         //Setup: Instantiate reader and call method
         Counters r = new Counters();
-        CounterResult cr = r.countOccurrencesInFile(STATIC_DATA_DIR + "/randomwords_1.txt");
+        CounterResult cr = r.countOccurrencesInFile(STATIC_DATA_DIR + "\\randomwords_1.txt");
 
         //Assume: ie. egestas matches dataset (2)
         Assertions.assertEquals(2, cr.getOccurences().get("egestas"));

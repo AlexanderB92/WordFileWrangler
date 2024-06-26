@@ -16,7 +16,7 @@ public class LoremFileGenerator {
     private int NUMBER_OF_FILES = 1;
     private int NUMBER_OF_WORDS = 200;
     private String FILENAME_PREFIX = "default_filename";
-    private final String PATH_TO_OUT_DIR = Paths.get("").toAbsolutePath() + "/generated_data";
+    private final String PATH_TO_OUT_DIR = Paths.get("").toAbsolutePath() + "\\generated_data";
 
 
     public LoremFileGenerator(int numberOfFiles, int numberOfWords, String filenamePrefix) {

@@ -45,7 +45,7 @@ public class DirectoryReader {
         HashSet<String> exclusions = new HashSet<String>();
 
         //No exclusions
-        if(!Files.exists(Paths.get(path + "/" + EXCLUDE_FILENAME))) {
+        if(!Files.exists(Paths.get(path + "\\" + EXCLUDE_FILENAME))) {
             return exclusions;
         }
 

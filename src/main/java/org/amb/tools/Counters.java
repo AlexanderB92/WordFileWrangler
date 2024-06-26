@@ -58,7 +58,7 @@ public class Counters {
         HashSet<String> exclusions = r.getExclusions(pathToDir);
 
         for (String filename : filenames) {
-            try (BufferedReader reader = new BufferedReader(new FileReader(pathToDir + "/" + filename))) {
+            try (BufferedReader reader = new BufferedReader(new FileReader(pathToDir + "\\" + filename))) {
                 String line;
                 while ((line = reader.readLine()) != null) {
                     line = line.toLowerCase();
@@ -96,7 +96,7 @@ public class Counters {
         HashSet<String> exclusions = r.getExclusions(pathToDir);
 
         for (String filename : filenames) {
-            try (BufferedReader reader = new BufferedReader(new FileReader(pathToDir + "/" + filename))) {
+            try (BufferedReader reader = new BufferedReader(new FileReader(pathToDir + "\\" + filename))) {
                 String line;
                 while ((line = reader.readLine()) != null) {
                     line = line.toLowerCase();
@@ -132,7 +132,7 @@ public class Counters {
         HashSet<String> exclusions = r.getExclusions(pathToDir);
 
         for (String filename : filenames) {
-            try (BufferedReader reader = new BufferedReader(new FileReader(pathToDir + "/" + filename))) {
+            try (BufferedReader reader = new BufferedReader(new FileReader(pathToDir + "\\" + filename))) {
                 String line;
                 while ((line = reader.readLine()) != null) {
                     line = line.toLowerCase();
