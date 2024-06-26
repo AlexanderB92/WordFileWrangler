@@ -43,7 +43,7 @@ public class Commands {
         Counters r = new Counters();
         CounterResult cr = r.countOccurrencesInDirectory(dir);
         int written = r.createFileDictionaryLike(cr, dir);
-        System.out.println(written + " files written to " + dir + " result_dict");
+        System.out.println(written + " files written to " + dir + "result_dict");
     }
 
 
