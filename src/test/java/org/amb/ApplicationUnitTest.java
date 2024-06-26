@@ -19,7 +19,7 @@ import java.util.Map;
 /**
  * Unit test for WordFileWrangler.
  */
-public class AppTest {
+public class ApplicationUnitTest {
 
     private final String GENERATED_DATA_DIR = Paths.get("").toAbsolutePath() + "/generated_data";
     private final String STATIC_DATA_DIR = Paths.get("").toAbsolutePath() + "/static_data";
